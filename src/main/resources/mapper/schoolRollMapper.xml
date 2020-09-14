@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 指明这个映射文件adminMapper.xml的逻辑路径,如果与接口建立映射，那么逻辑路径应该与接口的物理路径一致-->
+<mapper namespace="com.jhxx.schoolroll.dao.SchoolRollDao">
+
+    <!--==================================基本查询============================-->
+   <!-- <select id="login" resultType="int">
+       SELECT count(1) FROM admin where username=#{password} and password=#{password}
+    </select>-->
+
+   <insert id="save"  useGeneratedKeys="true" keyProperty="id">
+         INSERT INTO school_roll (idNumber,schoolNumber, name, sex, birthDate, birthPlaceCode, nativePlace, nation, nationality,
+         IdCardType, foreignOrTheMainland, health, politics, category, domicilePlace, classNumber, admissionDate,
+         theEntranceWay, studyingWay, presentAddress, mailingAddress, familyAddress, phoneNumber, postalCode, onlyChild,
+         preschoolEducation, leftoverChildren, amountSought, publicSubsidies, orphan,martyr, distanceFromSchool, commuting,
+         needTakeTheSchoolBus, formerName, idCardOverdueTime, bloodType, specialty, studentStatusNumber, classStudentId,
+         studentsSource, email, businessPage, disabilityTypes, governmentBuyDegree, learningInRegularClassroom,
+         nameOfFamilyMember1, memberRelationship1, membershipStatement1, memberPresentAddress1, memberDomicilePlace1,
+         memberNumberPhoneNumber1, memberWhetherGuardian1, memberIdCardType1, memberIdNumber1, memberNation1, memberWorkUniT1,
+         memberPost1, nameOfFamilyMember2, memberRelationship2, membershipStatement2, memberPresentAddress2, memberDomicilePlace2,
+         memberNumberPhoneNumber2, memberWhetherGuardian2, memberIdCardType2, memberIdNumber2, memberNation2, memberWorkUniT2,
+         memberPost2, trailingChildren)
+         VALUES (#{idNumber},#{schoolNumber}, #{name}, #{sex}, #{birthDate}, #{birthPlaceCode}, #{nativePlace}, #{nation}, #{nationality},
+         #{idCardType}, #{foreignOrTheMainland}, #{health}, #{politics}, #{category}, #{domicilePlace}, #{classNumber},
+         #{admissionDate}, #{theEntranceWay}, #{studyingWay}, #{presentAddress}, #{mailingAddress}, #{familyAddress}, #{phoneNumber},
+         #{postalCode}, #{onlyChild}, #{preschoolEducation}, #{leftoverChildren}, #{amountSought}, #{publicSubsidies}, #{orphan},
+         #{martyr}, #{distanceFromSchool}, #{commuting}, #{needTakeTheSchoolBus}, #{formerName}, #{idCardOverdueTime}, #{bloodType},
+         #{specialty}, #{studentStatusNumber}, #{classStudentId}, #{studentsSource}, #{email}, #{businessPage}, #{disabilityTypes},
+         #{governmentBuyDegree}, #{learningInRegularClassroom}, #{nameOfFamilyMember1}, #{memberRelationship1}, #{membershipStatement1},
+         #{memberPresentAddress1}, #{memberDomicilePlace1}, #{memberNumberPhoneNumber1}, #{memberWhetherGuardian1},
+         #{memberIdCardType1}, #{memberIdNumber1}, #{memberNation1}, #{memberWorkUniT1}, #{memberPost1}, #{nameOfFamilyMember2},
+         #{memberRelationship2}, #{membershipStatement2}, #{memberPresentAddress2}, #{memberDomicilePlace2}, #{memberNumberPhoneNumber2},
+         #{memberWhetherGuardian2}, #{memberIdCardType2}, #{memberIdNumber2}, #{memberNation2}, #{memberWorkUniT2}, #{memberPost2}, #{trailingChildren});
+    </insert>
+</mapper>
